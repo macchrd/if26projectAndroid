@@ -3,6 +3,7 @@ package fr.utt.if26.if26project;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -382,8 +383,36 @@ public class BDPersistance extends SQLiteOpenHelper implements PersistanceInterf
 
 
     @Override
-    public int countEnseignant() {
-        return 0;
+    public ArrayList<Integer> countEnseignant() {
+        ArrayList<Integer> count = new ArrayList<Integer>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ENSEIGNANT));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ENSEIGNANT,ATTRIBUT_TYPE+" = \"Professeur\""));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ENSEIGNANT,ATTRIBUT_TYPE+" = \"Maitre de conférence\""));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ENSEIGNANT,ATTRIBUT_TYPE+" = \"Contractuel\""));
+
+        db.close();
+        return count;
+    }
+    public ArrayList<Integer> countModule() {
+        ArrayList<Integer> count = new ArrayList<Integer>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_MODULE));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_MODULE,ATTRIBUT_CATEGORIE+" = \"CS\""));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_MODULE,ATTRIBUT_CATEGORIE+" = \"TM\""));
+        db.close();
+        return count;
+    }
+    public ArrayList<Integer> countEtudiant() {
+        ArrayList<Integer> count = new ArrayList<Integer>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ETUDIANT));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ETUDIANT,ATTRIBUT_FILIERE+" = \"MRI\""));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ETUDIANT,ATTRIBUT_FILIERE+" = \"MSI\""));
+        count.add((int)DatabaseUtils.queryNumEntries(db, TABLE_ETUDIANT,ATTRIBUT_FILIERE+" = \"MPL\""));
+
+        db.close();
+        return count;
     }
 
     @Override

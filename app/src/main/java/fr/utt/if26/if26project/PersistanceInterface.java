@@ -19,7 +19,7 @@ public interface PersistanceInterface {
         public Enseignant getEnseignant(String key);
 
         // retourne le nombre de module
-        public int countEnseignant();
+        public ArrayList<Integer> countEnseignant();
 
         // retourne l'ensemble des modules de la base
         public ArrayList<Enseignant> getAllEnseignants();
