@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.utt.if26.if26project">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/utt"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GestionEnseignants"
+                  android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.GestionEnseignants" />
+        </activity>
+        <activity android:name=".GestionModule">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.GestionModule" />
+        </activity>
+        <activity android:name=".GestionEtudiants">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.GestionEtudiants" />
+        </activity>
+        <activity android:name=".RepartitionEtudiants">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.RepartitionEtudiants" />
+        </activity>
+        <activity android:name=".AfficheEnseignant">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.AfficheEnseignant" />
+        </activity>
+        <activity android:name=".AfficheEtudiant">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.AfficheEtudiant" />
+        </activity>
+        <activity android:name=".AfficheModule">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.utt.if26.if26project.AfficheModule" />
+        </activity>
+
+    </application>
+
+</manifest>

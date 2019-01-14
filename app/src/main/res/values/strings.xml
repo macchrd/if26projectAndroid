@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Manage\'UTT</string>
+
+        <string-array name="type_enseignants">
+            <item>Tous types</item>
+            <item>Contractuel</item>
+            <item>Professeur</item>
+            <item>Maitre de conférence</item>
+        </string-array>
+        <string-array name="niveau_etudiant">
+            <item>Tous niveaux</item>
+            <item>ISI1</item>
+            <item>ISI2</item>
+            <item>ISI3</item>
+            <item>ISI4</item>
+            <item>ISI5</item>
+            <item>ISI6</item>
+            <item>ISI7</item>
+            <item>ISI8</item>
+        </string-array>
+    <string-array name="filiere_etudiant">
+        <item>Toutes filières</item>
+        <item>MSI</item>
+        <item>MCS</item>
+        <item>MPL</item>
+    </string-array>
+    <string-array name="parcours_module">
+        <item>Tous parcours</item>
+        <item>TCBR</item>
+        <item>MSI</item>
+        <item>MCS</item>
+        <item>MPL</item>
+    </string-array>
+    <string-array name="categorie_module">
+        <item>Toutes catégories</item>
+        <item>CS</item>
+        <item>TM</item>
+    </string-array>
+</resources>

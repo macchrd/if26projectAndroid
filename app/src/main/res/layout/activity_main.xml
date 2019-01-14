@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="10dp"
+    android:minWidth="10dp"
+    app:layout_constraintVertical_chainStyle="spread"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/gestionUE"
+        android:layout_width="334dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginStart="94dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Gestion des UE"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/gestionSemestre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/gestionEnseignants"
+        android:layout_width="334dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginStart="94dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Gestion des enseignants"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/gestionUE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/gestionSemestre"
+        android:layout_width="334dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginStart="94dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Gestion du semestre \nen cours"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/repartitionEtudiants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/repartitionEtudiants"
+        android:layout_width="334dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="96dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginStart="94dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Répartition des étudiants"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
